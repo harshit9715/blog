@@ -16,3 +16,9 @@
   .backToHome {
     margin: 3rem 0 0;
   }
+
+  @media screen and (max-width: 600px) {
+    .container {
+      margin: 1.5rem;
+    }
+  }
