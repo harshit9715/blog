@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
 export const name = 'Harshit'
-export const siteTitle = 'Next.js Sample Website'
+export const siteTitle = 'Harshit\'s Portfolio'
 
 export default function Layout({ children, home }) {
   return (
@@ -14,7 +14,7 @@ export default function Layout({ children, home }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Welcome to my profile, You can know all about me from here."
         />
         <meta
           property="og:image"
