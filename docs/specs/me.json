@@ -1,0 +1,783 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Harshit Gupta's API Resume",
+    "description": "## Hey there! Welcome to my API resume.</br>\n### Here you can find all about me. You can even leave a `feedback through APIs`. Please do so it you like my work or if you want request a blog on how you can make yours.\"\n",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://f0nrnfalg7.execute-api.ap-south-1.amazonaws.com/{basePath}",
+      "variables": {
+        "basePath": {
+          "enum": [
+            "prod"
+          ],
+          "default": "prod"
+        }
+      }
+    }
+  ],
+  "tags": [
+    {
+      "name": "All in one",
+      "description": "See all information about me in 1 call."
+    },
+    {
+      "name": "Work Profile",
+      "description": "See only work related information."
+    },
+    {
+      "name": "Feedback",
+      "description": "Use them to provide a feedback."
+    },
+    {
+      "name": "Others",
+      "description": "See not so work related info."
+    }
+  ],
+  "paths": {
+    "/skills": {
+      "get": {
+        "summary": "Skills I have acquired so far.",
+        "description": "- I am relatively new in the industry and I don't have ton of experience. I never say no to a problem and works with whatever come my way.\n- Checkout my [blog](https://portfolio-harshit9715.vercel.app/) to see my work-life journey.\n",
+        "tags": [
+          "Work Profile"
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Skill"
+                  }
+                },
+                "examples": {
+                  "example1": {
+                    "description": "200 response",
+                    "value": [
+                      {
+                        "name": "Python",
+                        "level": "Intermediate",
+                        "keywords": [
+                          "Flask",
+                          "FastAPI",
+                          "List Comprehension"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/work": {
+      "get": {
+        "summary": "Places that I have worked and associated roles.",
+        "description": "I usually work as a fulltime developer/software engineer but if you are working on something cool and have questions, you can reach me out on my [linkedin](https://www.linkedin.com/in/harshit9715/).<hr/> You can also mail me [@harshit9715](harshit9715@gmail.com)",
+        "tags": [
+          "Work Profile"
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WorkPlace"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/awards": {
+      "get": {
+        "tags": [
+          "Work Profile"
+        ],
+        "summary": "Lst of my awards and certifications.",
+        "description": "This API returns a list of certifications and awards that I have achieved so far.",
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Award"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/references": {
+      "get": {
+        "tags": [
+          "Work Profile"
+        ],
+        "summary": "What my managers and colleagues think about me.",
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Refrences"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/basics": {
+      "get": {
+        "summary": "Basic Info.",
+        "description": "Some basic info about me..",
+        "tags": [
+          "Work Profile"
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Basic"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/interests": {
+      "get": {
+        "summary": "Things I do apart from work",
+        "description": "Things that I am passionate about apart from computers and tech",
+        "tags": [
+          "Others"
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Interests"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/education": {
+      "get": {
+        "summary": "Education Info.",
+        "description": "Some basic info about my qualifications.",
+        "tags": [
+          "Others"
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/picture/me": {
+      "get": {
+        "summary": "A picture of me.",
+        "description": "A picture of me.",
+        "tags": [
+          "Others"
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "content": {
+              "image/jpg": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/picture/earth": {
+      "get": {
+        "summary": "A random image of earth.",
+        "description": "A random image of earth from Google Earth Wallpapers.",
+        "tags": [
+          "Others"
+        ],
+        "parameters": [
+          {
+            "name": "fileName",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "maximum": 250,
+              "minimum": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "content": {
+              "image/jpg": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "tags": [
+          "All in one"
+        ],
+        "summary": "Complete API Profile",
+        "description": "Use this API to get complete profile information in one go.",
+        "responses": {
+          "200": {
+            "description": "200 OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompleteProfile"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/feedback": {
+      "get": {
+        "summary": "See all feedbacks given so far.",
+        "description": "Use this API to see what other's think about this resume.",
+        "tags": [
+          "Feedback"
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NewFeedback"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Give your feedback",
+        "description": "This API takes feedback and name (optionally) and add the feedback to the list of feedbacks.<hr/>\n- **You need to pass a secret string which you can use to update your feedback. This makes sure no one else can update your feedback.**\n- This is the best I could come up with instead of all that create account hassel.\n",
+        "tags": [
+          "Feedback"
+        ],
+        "parameters": [
+          {
+            "name": "secret",
+            "in": "header",
+            "description": "A secret that prevents cross feedback updates, could be any string that is easy to remember and hard to guess.",
+            "example": "KungfuPanda",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewFeedback"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeedbackRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/feedback/{id}": {
+      "get": {
+        "summary": "See a specific feedback.",
+        "description": "Use this API to see a specific feedback.",
+        "tags": [
+          "Feedback"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "This value is autogenerated for every new feedback, you and is returned in list feedbacks API.",
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewFeedback"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update a specific feedback.",
+        "description": "Use this API to update a specific feedback. You can only update yours since its authenticated request.",
+        "tags": [
+          "Feedback"
+        ],
+        "parameters": [
+          {
+            "name": "secret",
+            "in": "header",
+            "required": true,
+            "description": "the secret used when creating a feedback.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "This value is autogenerated for every new feedback, you and is returned in list feedbacks API.",
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFeedback"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewFeedback"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Empty": {
+        "title": "Empty Schema",
+        "type": "object"
+      },
+      "CompleteProfile": {
+        "title": "Complete profile",
+        "type": "object",
+        "properties": {
+          "basics": {
+            "$ref": "#/components/schemas/Basic"
+          },
+          "work": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WorkPlace"
+            }
+          },
+          "education": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Education"
+            }
+          },
+          "volunteer": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Volunteer"
+            }
+          },
+          "awards": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Award"
+            }
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Skill"
+            }
+          }
+        }
+      },
+      "Skill": {
+        "title": "Skill Schema",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "WorkPlace": {
+        "title": "Work places schema",
+        "type": "object",
+        "properties": {
+          "company": {
+            "type": "string"
+          },
+          "position": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "endDate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "Present"
+                ]
+              }
+            ]
+          },
+          "summary": {
+            "type": "string"
+          },
+          "highlights": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Award": {
+        "title": "Award Schema",
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "awarder": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "url"
+          }
+        }
+      },
+      "Refrences": {
+        "title": "Reference Schema",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "refrence": {
+            "type": "string"
+          }
+        }
+      },
+      "Basic": {
+        "title": "Basic Info",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "alias": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "picture": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "website": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "location": {
+            "$ref": "#/components/schemas/Location"
+          },
+          "profiles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExtProfile"
+            }
+          }
+        }
+      },
+      "Location": {
+        "title": "Location Schema",
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "countryCode": {
+            "type": "string"
+          },
+          "regiob": {
+            "type": "string"
+          }
+        }
+      },
+      "ExtProfile": {
+        "title": "External Profile",
+        "type": "object",
+        "properties": {
+          "network": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      },
+      "Education": {
+        "title": "Education Schema",
+        "type": "object",
+        "properties": {
+          "insitiution": {
+            "type": "string"
+          },
+          "area": {
+            "type": "string"
+          },
+          "studyType": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string"
+          },
+          "endDate": {
+            "type": "string"
+          }
+        }
+      },
+      "Volunteer": {
+        "title": "Volunteer Schema",
+        "type": "object",
+        "properties": {
+          "organization": {
+            "type": "string"
+          },
+          "position": {
+            "type": "string"
+          },
+          "website": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string"
+          },
+          "endDate": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "highlights": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Interests": {
+        "title": "Interest Schema",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "UpdateFeedback": {
+        "title": "Update Feedback Schema",
+        "required": [
+          "feedback"
+        ],
+        "type": "object",
+        "properties": {
+          "feedback": {
+            "minLength": 5,
+            "type": "string"
+          }
+        }
+      },
+      "NewFeedback": {
+        "title": "New Feedback Schema",
+        "required": [
+          "feedback"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "default": "Anonymous"
+          },
+          "feedback": {
+            "minLength": 5,
+            "type": "string"
+          }
+        }
+      },
+      "FeedbackRes": {
+        "title": "Feedback Response Schema",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "feedback": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
