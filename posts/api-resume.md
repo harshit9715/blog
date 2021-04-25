@@ -17,6 +17,8 @@ I set out on a mission to build my API resume and for the people who prefers mor
 
 - If you love postman, and test the APIs via postman, [here](https://documenter.getpostman.com/view/8553846/TzJx9cWc) you go.
 
+- If you like to keep everything with source code, I still got you covered. I have deployed it at [github pages](https://harshit9715.github.io/blog/) as well.
+
 ## Why static host it?
 
 You will be surprised to know that not many people know about this and generally host their swagger using a server. (like, express server and EBS.) **Which is usually 25x more costlier.**
