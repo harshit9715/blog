@@ -10,6 +10,7 @@ date: '2021-01-05'
 - I like writing python🐍 scripts, bash scripts, and google app scripts.
 - I am a "Never Say Never" kind of person, who is always looking for contributing and helping anyone who reaches out.
 - I love to be understood, often because of this my colleagues and friends say that I can be a good teacher or instructor. I am okay with taking 10 extra steps for explaining a problem/theory/solution to its core. Not just to solve a problem but understand why it occurred in the first place.
+- This list is becoming long so, I am planning to come up with a timeline-like design.
 
 ## This is where it starts
 
@@ -42,10 +43,15 @@ date: '2021-01-05'
 - Worked on integrating [Decentralized Identity](https://identity.foundation/) Management solution (Blockchain)
 - Built a ticketing system app. An e-pass for office access using AWS serverless and React-native.
 - Finally, worked on NodeJS express server application and Heroku deployment.
-- Worked with [Cassandra](https://cassandra.apache.org/) database (best-in-class distributed database with almost linear scalability.)
-- Jenkins, I have worked with Jenkins, agents, jobs, pipelines, CI/CD.
+- Worked with [Cassandra](https://cassandra.apache.org/) database (best-in-class distributed database with almost linear scalability.), _I am a certified associate developer and DBA for cassandra._
+- Jenkins, I have worked with **Jenkins**, agents, jobs, pipelines, CI/CD.
 - I have worked with [Github Actions](https://github.com/features/actions) as well. (Automation phase 3, that's what they call it.)
-- I worked with React to finish my journey as a full-stack dev.
+- I worked with **React** to finish my journey as a full-stack dev.
+- After completing that, I started writing this blog.
+- I built my [API Resume](https://portfolio-9715.s3.ap-south-1.amazonaws.com/myRes.json) and hosted it on 4 different places as **OpenAPI Docs**.
+- I worked with FastAPIs for building Python APIs.
+- I worked with **oAuth**, federated signin and JWTs for authentications. (Who is _Mr. Identity_?)
+- I am exploring **AWS-CDK** very closely these days, apart from setting up **AWS-SAM** local testing.
 
 ### Also
 
@@ -55,8 +61,10 @@ date: '2021-01-05'
 - I have worked with Socket.io to build a real-time chat application.
 - I have built a chatbot using google dialogue flow. (It's called [SecretSanta Bot🎅](https://t.me/SecretSantaHelperBot) and it's available on telegram)
 
-Thanks, @waseem, you found me in the crowd, understood my skills gave me the right track, introduced me to the right people, and give me the career boost I needed. You are one of the best people I have worked with. Your leadership is inspirational.
+## My mentors
 
-Thanks, @dhana, for being the mentor and the lead I needed. You taught me how to chase perfection and how to break down complex problems. One of the key things I that you taught me was the importance of "naming convention" and writing documentation. You pushed me for my first tech talk. I will always be grateful to you for my communication and teamwork skills.  (Break it until you make it, DRY, TDD).
+Thanks, [@waseem](https://www.linkedin.com/in/mdwaseem/), you found me in the crowd, understood my skills gave me the right track, introduced me to the right people, and give me the career boost I needed. You are one of the best people I have worked with. Your leadership is inspirational.
 
-Thanks, @sanjay sir for recognizing my potential, when I was just a college guy and making me a part of our @Atmecs family.
+Thanks, [@dhana](https://www.linkedin.com/in/v-s-s-r-dhanapathi-marepalli-24716b92/), for being the mentor and the lead I needed. You taught me how to chase perfection and how to break down complex problems. One of the key things I that you taught me was the importance of "naming convention" and writing documentation. You pushed me for my first tech talk. I will always be grateful to you for my communication and teamwork skills.  (Break it until you make it, DRY, TDD).
+
+Thanks, [@sanjay sir](https://www.linkedin.com/in/sanjaysi/) for recognizing my potential, when I was just a college guy and making me a part of our [@Atmecs](https://www.linkedin.com/company/atmecs-inc/) family.
