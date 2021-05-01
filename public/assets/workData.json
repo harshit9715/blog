@@ -1,0 +1,65 @@
+[   
+    {
+        "title": "Cloud and Serverless",
+        "subTitle": "AWS, Azure, GCP, Oracle cloud",
+        "date": "November 2019",
+        "description": ["I have good developed good hands-on with python over last 5 years, and using jupiter notebooks. (Sometimes I use Jupyter while developing scripts as well, it reduces development time)"],
+        "refs": []
+    },
+    {
+        "title": "Python scripting",
+        "subTitle": "Python, Jupyter, Scripting, Competitive programming",
+        "date": "Since 2016",
+        "description": ["I have good developed good hands-on with python over last 5 years, and using jupiter notebooks. (Sometimes I use Jupyter while developing scripts as well, it reduces development time.)"],
+        "refs": []
+    },
+    {
+        "title": "NLP with Spacy",
+        "subTitle": "Distractor generator challenge",
+        "date": "October 2019",
+        "description": ["Worked with spaCy (open-source NLP) and built a model with 26% accuracy for an open challenge. (I know it's low, best achieved was 34%... bring this up and we will talk about the problem statement and possible solutions that we could have done.)"],
+        "refs": [{
+            "name": "Distractor?",
+            "url": "https://www.aclweb.org/anthology/W18-0548/"
+        }
+    ]
+    },
+    {
+        "title": "Edge Computing ML",
+        "subTitle": "Edge-ML and GA",
+        "date": "September 2019",
+        "description": ["Worked on genetic algorithms (Darwinism) and Edge-ML using raspberry and intel-neural-compute-stick and built 5 class image classification model."],
+        "refs": [{
+            "name": "Edge-ML",
+            "url": "https://towardsdatascience.com/why-machine-learning-on-the-edge-92fac32105e6"
+        }
+    ]
+    },
+    {
+        "title": "Processing",
+        "subTitle": "",
+        "date": "August 2019",
+        "description": ["worked with processing and understood 'how-to programming'.🖥️"],
+        "refs": [{
+            "name": "processing",
+            "url": "https://processing.org/"
+        }
+    ]
+    },
+    {
+        "title": "MRBS PhP App",
+        "subTitle": "Deployed Meeting Room Booking System",
+        "date": "July 2019",
+        "description": [
+            "Deployed a PHP app MRBS in office for managing meeting sessions, not really used since we had a solution from google suite"
+        ],
+        "refs": [{
+            "name": "MRBS",
+            "url": "https://mrbs.sourceforge.io/demo.php"
+        },{
+            "name": "G-Suite MRBS",
+            "url": "https://support.google.com/a/answer/1686462?hl=en"
+        }
+    ]
+    }
+]
