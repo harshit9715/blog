@@ -27,6 +27,8 @@ export default function Home({ allPostsData }) {
           <a href='https://www.linkedin.com/in/harshit9715/'><span>LinkedIn</span></a></p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Work-life so far...</h2>
+          <p>[W.I.P] You can check it <Link href={`/work-life`}><a>here</a></Link>.</p>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
