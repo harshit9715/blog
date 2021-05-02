@@ -2,16 +2,83 @@
     {
         "title": "Cloud and Serverless",
         "subTitle": "AWS, Azure, GCP, Oracle cloud",
-        "date": "November 2019",
-        "description": ["I have good developed good hands-on with python over last 5 years, and using jupiter notebooks. (Sometimes I use Jupyter while developing scripts as well, it reduces development time)"],
+        "date": "Since January 2020",
+        "description": ["I have 2 years of working in cloud, majorly in serverless stack. Building APIs and managing database and infrastructure."],
+        "refs": [{
+            "name": "My Github",
+            "url": "https://github.com/harshit9715"
+        }]
+    },
+    {
+        "title": "API Development",
+        "subTitle": "Serverless APIs, NodeJs, Python ,Postman, OpenAPI, Swagger",
+        "date": "Since January 2020",
+        "description": ["I have experience building APIs in NodeJs and Python. I have written some amazing documentations using OpenAPI specification, I learnt this as a challenge while upgrading a swagger 2 doc to OAS3."],
+        "refs": [{
+            "name": "My API Resume",
+            "url": "/posts/api-resume"
+        }]
+    },
+    {
+        "title": "Contact Tracing App",
+        "subTitle": "Covid-19, Aarogue Setu, etc",
+        "date": "October 2020",
+        "description": ["Built infrastructure for a covid-19 contact app, (like Aarogue Setu) obstacle was, massive amount of egress traffic! Failed twice due to cost feasibility issues, 3rd time, it worked out fine."],
         "refs": []
     },
     {
-        "title": "Python scripting",
-        "subTitle": "Python, Jupyter, Scripting, Competitive programming",
-        "date": "Since 2016",
-        "description": ["I have good developed good hands-on with python over last 5 years, and using jupiter notebooks. (Sometimes I use Jupyter while developing scripts as well, it reduces development time.)"],
+        "title": "3rd Party Integrations",
+        "subTitle": "Stripe, Hotelbeds, Kiwi, WeatherStack, Mapbox, etc",
+        "date": "March 2020",
+        "description": ["I also have integrated with backends such as firebase and AWS Amplify."],
         "refs": []
+    },
+    {
+        "title": "Scripting",
+        "subTitle": "Python, Google App Scripting,Jupyter, Scripting, Competitive programming",
+        "date": "Since 2016",
+        "description": ["I have developed good hands-on with python over last 5 years, and using jupiter notebooks. (Sometimes I use Jupyter while developing scripts as well, it reduces development time.), I used Google App script to automate simple tasks when using google sheets, gmail, calendar,etc"],
+        "refs": [{
+            "name": "Python Scripting",
+            "url": "https://github.com/harshit9715/python-scripts"
+        },
+        {
+            "name": "Bash Scripting",
+            "url": "https://github.com/harshit9715/bash-scripts"
+        }
+    ]
+    },
+    {
+        "title": "CICD and Automation",
+        "subTitle": "Cloudbees Certified Jenkins Engineer, Github/Gitlab Actions, Bitbucket Pipelines, etc",
+        "date": "Since 2021",
+        "description": ["I have been playing with Github actions for a couple of months, building CICD for projects. I am Jenkins Certified. I enjoy this a lot."],
+        "refs": []
+    },
+    {
+        "title": "FullStack Development",
+        "subTitle": "MERN Stack, serverless, vercel, static hosting, SSR",
+        "date": "Since April 2020",
+        "description": ["It's never easy to picture what an end result will look like especially when you are preparing a backend, sometimes you also need to know some basic frontend as well"],
+        "refs": []
+    },
+    {
+        "title": "React and React Native",
+        "subTitle": "Still learning to write production level, manageable code.",
+        "date": "Since August 2020",
+        "description": ["Sometimes, you just need a guy who can quickly build and end-to-end POC, I have experience building POC in react and react native. heck, my react-native app is in production."],
+        "refs": []
+    },
+    {
+        "title": "Chatbot using Google DialogueFlow",
+        "subTitle": "I created a chatbot for playing Secret Santa🎅",
+        "date": "November 2020",
+        "description": ["I have worked with Socket.io to build a real-time chat application. I have built a chatbot using google dialogue flow. It's called 'SecretSanta Bot🎅' and it's available on telegram"],
+        "refs": [{
+            "name": "SecretSantaHelperBot🎅",
+            "url": "https://t.me/SecretSantaHelperBot"
+        }
+    ]
     },
     {
         "title": "NLP with Spacy",
@@ -59,6 +126,19 @@
         },{
             "name": "G-Suite MRBS",
             "url": "https://support.google.com/a/answer/1686462?hl=en"
+        }
+    ]
+    },
+    {
+        "title": "Thats All",
+        "subTitle": "There is so much I haven't added here, check that out in the detailed blog",
+        "date": "End",
+        "description": [
+            "Have a nice day, stay-safe."
+        ],
+        "refs": [{
+            "name": "Detailed Work-Life",
+            "url": "/posts/work-life"
         }
     ]
     }
