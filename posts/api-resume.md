@@ -1,5 +1,5 @@
 ---
-title: 'I created my API Resume and static hosted it along with swagger UI'
+title: 'I created my API Resume and static hosted it using swagger UI'
 date: '2021-04-24'
 ---
 
