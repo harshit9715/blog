@@ -12,7 +12,7 @@ export default function Layout({ children, home }) {
     <div className={styles.container}>
       <Head>
       <link rel="shortcut icon" href="/images/favicon.ico" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <meta
           name="description"
           content="Welcome to my profile, You can know all about me from here."

@@ -20,9 +20,9 @@ export default function WorkLife() {
                     <a href='https://www.linkedin.com/in/harshit9715/'><span>LinkedIn</span></a></p>
             </section>
             {/* <Scrollbars style={{ height: 600 }}> */}
-            <label>Detailed? </label>
+            <label htmlFor="detail" >Detailed? </label>
             <label className={utilStyles.life__detail_switch}>
-                <input type="checkbox" onClick={() => { setShowDetail(!showDetail) }} />
+                <input id="detail" type="checkbox" onClick={() => { setShowDetail(!showDetail) }} />
                 <span className={utilStyles.life__slider_round}></span>
             </label>
             <VerticalTimeline>

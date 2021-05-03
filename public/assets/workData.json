@@ -73,9 +73,9 @@
         "title": "Chatbot using Google DialogueFlow",
         "subTitle": "I created a chatbot for playing Secret Santa🎅",
         "date": "November 2020",
-        "description": ["I have worked with Socket.io to build a real-time chat application. I have built a chatbot using google dialogue flow. It's called 'SecretSanta Bot🎅' and it's available on telegram"],
+        "description": ["I have worked with Socket.io to build a real-time chat application. I have built a chatbot using google dialogue flow. It's called 'SecretSanta Bot' and it's available on telegram"],
         "refs": [{
-            "name": "SecretSantaHelperBot🎅",
+            "name": "SecretSantaBot🎅",
             "url": "https://t.me/SecretSantaHelperBot"
         }
     ]
