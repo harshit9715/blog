@@ -24,7 +24,7 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <img src={require('../public/images/profile.jpg?resize&size=144')} className={utilStyles.borderCircle} />
+            <img alt={name + '\'s picture'} src={require('../public/images/profile.jpg?resize&size=144')} className={utilStyles.borderCircle} />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (

@@ -1,24 +1,24 @@
 .container {
-    max-width: 40rem;
-    padding: 0 1rem;
-    margin: 3rem auto 6rem;
-    padding: 2rem;
-    border-radius: 15px;
-    background-color: white;
-  }
-  
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .backToHome {
-    margin: 3rem 0 0;
-  }
+  max-width: 40rem;
+  padding: 0 1rem;
+  margin: 1.5rem auto;
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: white;
+}
 
-  @media screen and (max-width: 600px) {
-    .container {
-      margin: 1.5rem;
-    }
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backToHome {
+  margin: 3rem 0 0;
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    margin: 1.5rem;
   }
+}
