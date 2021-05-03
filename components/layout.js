@@ -11,20 +11,16 @@ export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
-      <link rel="shortcut icon" href="/images/favicon.ico" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <meta
           name="description"
           content="Welcome to my profile, You can know all about me from here."
         />
-        <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:title" content={siteTitle} />
+        <meta property="og:description" content="Welcome to my profile, You can know all about me from here." />
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/55243567?s=400&u=24ed740afcb2eadb6c02fd4ed3debed0112d56c" />
+        <meta property="og:url" content="https://portfolio-harshit9715.vercel.app/"></meta>
       </Head>
       <header className={styles.header}>
         {home ? (
