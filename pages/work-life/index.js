@@ -9,7 +9,7 @@ import workData from '../../public/assets/workData.json';
 import { useState } from 'react';
 export default function WorkLife() {
     const [showDetail, setShowDetail] = useState(false);
-    const colors = (op = 1) => [`rgba(16, 204, 82, ${op})`, `rgba(233, 30, 99, ${op})`, `rgba(33, 150, 243, ${op})`]
+    const colors = (op = 1) => [`linear-gradient(to right bottom, rgba(41, 152, 255, ${op}), rgba(86, 67, 250, ${op}))`, `linear-gradient(to right bottom, rgba(126, 213, 111, ${op}), rgba(40, 180, 133, ${op}))`, `linear-gradient(to right bottom, rgba(255, 185, 0, ${op}), rgba(255, 119, 48, ${op}))`]
     return (
         <Layout>
             <Head>
@@ -31,7 +31,7 @@ export default function WorkLife() {
                         key={index}
                         // className="vertical-timeline-element--work"
                         dateClassName={utilStyles.timeline_date_fix}
-                        contentStyle={{ background: colors()[index % 3], marginLeft: '0' }}
+                        contentStyle={{ background: colors()[index % 3], marginLeft: '0', color: '#000' }}
                         contentArrowStyle={{ borderRight: `7px solid  ${colors()[index % 3]}` }}
                         date={item.date}
                         iconStyle={{ background: colors()[index % 3], color: '#fff' }}

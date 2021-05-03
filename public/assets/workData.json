@@ -21,7 +21,7 @@
     },
     {
         "title": "Contact Tracing App",
-        "subTitle": "Covid-19, Aarogue Setu, etc",
+        "subTitle": "Covid-19, Aarogya Setu, etc",
         "date": "October 2020",
         "description": ["Built infrastructure for a covid-19 contact app, (like Aarogue Setu) obstacle was, massive amount of egress traffic! Failed twice due to cost feasibility issues, 3rd time, it worked out fine."],
         "refs": []
