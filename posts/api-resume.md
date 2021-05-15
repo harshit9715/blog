@@ -11,9 +11,9 @@ I set out on a mission to build my API resume and for the people who prefers mor
 
 ## Links
 
-- You can check out the raw (JSON) version [here](https://portfolio-9715.s3.ap-south-1.amazonaws.com/myRes.json).
+- You can check out the raw (JSON) version [here](https://api.iharshit.site).
 
-- If you are more of a look-n-feel person, then check out [this one](http://portfolio-9715.s3-website.ap-south-1.amazonaws.com/docs/).
+- If you are more of a look-n-feel person, then check out [this one](https://iharshit.site/docs/).
 
 - If you love postman, and test the APIs via postman, [here](https://documenter.getpostman.com/view/8553846/TzJx9cWc) you go.
 
