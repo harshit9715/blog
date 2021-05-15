@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://f0nrnfalg7.execute-api.ap-south-1.amazonaws.com/{basePath}",
+      "url": "https://api.iharshit.site",
       "variables": {
         "basePath": {
           "enum": [
