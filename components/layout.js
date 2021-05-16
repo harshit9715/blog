@@ -18,6 +18,7 @@ export default function Layout({ children, home }) {
         <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://portfolio-harshit9715.vercel.app/"></meta>
         <meta property="og:type" content="Portfolio"></meta>
         <meta name="author" content={name} />
+        <meta property="author" content={name} />
       </Head>
       <header className={styles.header}>
         {home ? (
