@@ -12,14 +12,12 @@ export default function Layout({ children, home }) {
       <Head>
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-        <meta
-          name="description"
-          content="Welcome to my profile, You can know all about me from here."
-        />
-        <meta property="og:title" content={siteTitle} />
-        <meta property="og:description" content="Welcome to my profile, You can know all about me from here." />
-        <meta property="og:image" content="https://avatars.githubusercontent.com/u/55243567?s=400&u=24ed740afcb2eadb6c02fd4ed3debed0112d56c" />
-        <meta property="og:url" content="https://portfolio-harshit9715.vercel.app/"></meta>
+        <meta prefix="og: http://ogp.me/ns#" property="og:title" content={siteTitle} />
+        <meta prefix="og: http://ogp.me/ns#" property="og:description" content="Welcome to my profile, You can know all about me from here." />
+        <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://avatars.githubusercontent.com/u/55243567?s=400&u=24ed740afcb2eadb6c02fd4ed3debed0112d56c" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://portfolio-harshit9715.vercel.app/"></meta>
+        <meta property="og:type" content="Portfolio"></meta>
+        <meta name="author" content={name} />
       </Head>
       <header className={styles.header}>
         {home ? (
