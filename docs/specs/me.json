@@ -290,7 +290,7 @@
         }
       }
     },
-    "/feedback": {
+    "/feedbacks": {
       "get": {
         "summary": "See all feedbacks given so far.",
         "description": "Use this API to see what other's think about this resume.",
@@ -369,7 +369,7 @@
         }
       }
     },
-    "/feedback/{id}": {
+    "/feedbacks/{id}": {
       "get": {
         "summary": "See a specific feedback.",
         "description": "Use this API to see a specific feedback.",
