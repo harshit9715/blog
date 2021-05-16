@@ -24,14 +24,14 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <img alt={name + '\'s picture'} src={require('../public/images/profile.jpg?resize&size=144')} className={utilStyles.borderCircle} />
+            <img alt={name + '\'s picture'} src={require('../public/images/profile.jpg?resize&size=252')} className={utilStyles.borderCircle} />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
           <>
             <Link href="/">
               <a>
-                <img src={require('../public/images/profile.jpg?resize&size=144')} className={utilStyles.borderCircle} />
+                <img src={require('../public/images/profile.jpg?resize&size=252')} className={utilStyles.borderCircle} />
               </a>
             </Link>
             <h2 className={utilStyles.headingLg}>
