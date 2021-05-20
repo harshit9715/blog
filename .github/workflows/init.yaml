@@ -25,12 +25,12 @@ jobs:
         run:  aws sts get-caller-identity
       - name: Enable static website
         run: |
-          BUCKET_EXISTS=$(aws s3api head-bucket --bucket {{secrets.BUCKET_NAME}} 2>&1 || true)
+          BUCKET_EXISTS=$(aws s3api head-bucket --bucket ${{ secrets.BUCKET_NAME }} 2>&1 || true)
           if [ -z "$BUCKET_EXISTS" ]; then
             echo "Bucket exists"
           else
             echo "Bucket does not exist"
-            aws s3 mb ${{ format( '{}', secrets.BUCKET_NAME) }}
+            aws s3 mb ${{ format( 's3://{}', secrets.BUCKET_NAME) }}
             aws s3 website ${{ format('s3://{}/', secrets.BUCKET_NAME) }} --index-document index.html --error-document error.html
             # Need to have this file in repo
             sed -i "${{ format('s/BUCKET_NAME/{}/g', secrets.BUCKET_NAME) }}" .github/s3_read_policy.json
