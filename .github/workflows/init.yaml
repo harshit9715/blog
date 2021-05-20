@@ -1,0 +1,39 @@
+name: Deploy to Amplify
+
+on:
+  push:
+    branches:
+      - static-serve
+  workflow_dispatch:
+  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{secrets.AWS_REGION}}
+          
+      - name: AWS Identity
+        run:  aws sts get-caller-identity
+      - name: Enable static website
+        run: |
+          BUCKET_EXISTS=$(aws s3api head-bucket --bucket {{secrets.BUCKET_NAME}} 2>&1 || true)
+          if [ -z "$BUCKET_EXISTS" ]; then
+            echo "Bucket exists"
+          else
+            echo "Bucket does not exist"
+            aws s3 mb {{ format('s3://{}', secrets.BUCKET_NAME) }}
+            aws s3 website {{ format('s3://{}/', secrets.BUCKET_NAME) }} --index-document index.html --error-document error.html
+            # Need to have this file in repo
+            sed -i "{{ format('s/BUCKET_NAME/{}/g', secrets.BUCKET_NAME) }}" .github/s3_read_policy.json
+            # Need to have this file in repo
+            aws s3api put-bucket-policy --bucket {{ format('{}', secrets.BUCKET_NAME) }} --policy file://.github/s3_read_policy.json
+          fi
