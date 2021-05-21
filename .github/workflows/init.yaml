@@ -28,9 +28,9 @@ jobs:
         id: mb
         shell: bash
         run: |
-          echo "##[set-output name=new_bucket_name;]${{ format( 's3://{0}-{1}', secrets.BUCKET_NAME, steps.extract.outputs.head_bn ) ) }}"
+          echo "##[set-output name=new_bucket_name;]${{ format( 's3://{0}-{1}', secrets.BUCKET_NAME, steps.extract.outputs.head_bn ) }}"
           if [ ${{ github.event.pull_request.merged }} -eq 'true' ]; then
-            echo "##[set-output name=old_bucket_name;]${{ format( 's3://{0}-{1}', secrets.BUCKET_NAME, steps.extract.outputs.base_bn ) ) }}"
+            echo "##[set-output name=old_bucket_name;]${{ format( 's3://{0}-{1}', secrets.BUCKET_NAME, steps.extract.outputs.base_bn ) }}"
           fi
 #       - name: Dump GitHub context
 #         env:
