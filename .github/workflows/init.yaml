@@ -3,7 +3,7 @@ name: Deploy to Amplify
 on:
   pull_request:
     branches:
-      - static-serve
+      - static-serve 
   workflow_dispatch:
   
 jobs:
@@ -15,6 +15,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Extract branch name
+        id: extract_branch
         shell: bash
         run: |
           echo $(whoami)
@@ -31,12 +32,12 @@ jobs:
         run:  aws sts get-caller-identity
       - name: Enable static website
         run: |
-          BUCKET_EXISTS=$(aws s3api head-bucket --bucket ${{ format( '{0}-{1}' , secrets.BUCKET_NAME), steps.extract_branch.outputs.branch.lowercase }} 2>&1 || true)
+          BUCKET_EXISTS=$(aws s3api head-bucket --bucket ${{ format( '{0}-{1}' , secrets.BUCKET_NAME, steps.extract_branch.outputs.branch ) }} 2>&1 || true)
           if [ -z "$BUCKET_EXISTS" ]; then
             echo "Bucket exists"
           else
             echo "Bucket does not exist"
-            echo "${{ format( 's3://{0}-{1}', secrets.BUCKET_NAME, steps.extract_branch.outputs.branch.lowercase ) }}"
+            echo "${{ format( 's3://{0}-{1}', secrets.BUCKET_NAME, steps.extract_branch.outputs.branch ) }}"
             # aws s3 mb ${{ format( 's3://{0}-{1}', secrets.BUCKET_NAME, steps.extract_branch.outputs.branch.lowercase ) }}
             # aws s3 website ${{ format('s3://{0}-{1}/', secrets.BUCKET_NAME, steps.extract_branch.outputs.branch.lowercase ) }} --index-document index.html --error-document error.html
             # # Need to have "s3_read_policy.json" file in repo under .github folder.
