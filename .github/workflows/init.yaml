@@ -23,7 +23,7 @@ jobs:
           echo "$(echo ${GITHUB_HEAD_REF,,})"
           echo "$(echo ${GITHUB_BASE_REF,,})"
           echo "##[set-output name=head_branch_name;]$(echo ${GITHUB_HEAD_REF,,})"
-          echo "##[set-output name=bucket_name;]${{ format( 's3://{0}-{1}', secrets.BUCKET_NAME, $head_branch_name ) }}"
+          echo "##[set-output name=bucket_name;]${{ format( 's3://{0}-{1}', secrets.BUCKET_NAME, $( ${GITHUB_HEAD_REF,,} ) ) }}"
 #       - name: Dump GitHub context
 #         env:
 #           GITHUB_CONTEXT: ${{ toJson(github) }}
