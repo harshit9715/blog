@@ -20,6 +20,7 @@ jobs:
         id: extract
         shell: bash
         run: |
+          echo "$(echo ${GITHUB,,})"
           echo "$(echo ${GITHUB_HEAD_REF,,})"
           echo "$(echo ${GITHUB_BASE_REF,,})"
           echo "##[set-output name=head_bn;]$(echo ${GITHUB_HEAD_REF,,})"
