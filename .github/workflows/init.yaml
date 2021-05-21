@@ -20,9 +20,10 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |
-          echo "This step is commented out."
+          echo "This step is not commented out."
           # echo "$GITHUB_CONTEXT"
-          # echo ${{ github.event.pull_request.title }}
+          echo ${{ github.head_ref }}
+          echo ${{ github.base_ref }}
       
       - name: Extract branch name
         id: extract_branch
