@@ -3,7 +3,7 @@ name: Deploy to Amplify
 on:
   pull_request:
     branches:
-      - static-serve
+      - static-serve 
   workflow_dispatch:
   
 jobs:
