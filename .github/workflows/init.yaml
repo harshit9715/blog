@@ -47,6 +47,7 @@ jobs:
             echo "Bucket exists"
             if [ ${{ github.event.pull_request.merged }} -eq 'true' ]; then
               aws s3 rb ${{ format( 's3://{0}-{1}', secrets.BUCKET_NAME, github.base_ref.lowercase ) }} --force
+            fi
           else
             echo "Bucket does not exist"
             echo "${{ format( 's3://{0}-{1}', secrets.BUCKET_NAME, github.base_ref.lowercase ) }}"
