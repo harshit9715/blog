@@ -1,4 +1,4 @@
-name: Deploy to Amplify
+name: Deploy to s3 static website
 
 on:
   pull_request:
@@ -17,15 +17,16 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |
-          echo "$GITHUB_CONTEXT"
-          echo ${{ github.event.pull_request.title }}
+          echo "This step is commented out."
+          # echo "$GITHUB_CONTEXT"
+          # echo ${{ github.event.pull_request.title }}
       
       - name: Extract branch name
         id: extract_branch
         shell: bash
         run: |
           echo $(whoami)
-          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/,,})"
+          echo "##[set-output name=branch;]$(echo ${{ github.base_ref }})"
         
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
