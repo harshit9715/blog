@@ -31,7 +31,7 @@ jobs:
         run:  aws sts get-caller-identity
       - name: Enable static website
         run: |
-          BUCKET_EXISTS=$(aws s3api head-bucket --bucket ${{ format( '{0}-{1}' , secrets.BUCKET_NAME), steps.extract_branch.outputs.branch.lowercase }} 2>&1 || true)
+          BUCKET_EXISTS=$(aws s3api head-bucket --bucket ${{ format( '{0}-{1}' , secrets.BUCKET_NAME, steps.extract_branch.outputs.branch.lowercase ) }} 2>&1 || true)
           if [ -z "$BUCKET_EXISTS" ]; then
             echo "Bucket exists"
           else
