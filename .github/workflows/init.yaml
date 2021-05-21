@@ -1,7 +1,7 @@
 name: Deploy to Amplify
 
 on:
-  push:
+  pull_request:
     branches:
       - static-serve
   workflow_dispatch:
@@ -14,6 +14,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
+      - name: Extract branch name
+        shell: bash
+        run: |
+          echo $(whoami)
+          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -25,15 +31,18 @@ jobs:
         run:  aws sts get-caller-identity
       - name: Enable static website
         run: |
-          BUCKET_EXISTS=$(aws s3api head-bucket --bucket ${{ secrets.BUCKET_NAME }} 2>&1 || true)
+          BUCKET_EXISTS=$(aws s3api head-bucket --bucket ${{ format( '{0}-{1}' , secrets.BUCKET_NAME), steps.extract_branch.outputs.branch.lowercase }} 2>&1 || true)
           if [ -z "$BUCKET_EXISTS" ]; then
             echo "Bucket exists"
           else
             echo "Bucket does not exist"
-            aws s3 mb ${{ format( 's3://{0}', secrets.BUCKET_NAME) }}
-            aws s3 website ${{ format('s3://{0}/', secrets.BUCKET_NAME) }} --index-document index.html --error-document error.html
-            # Need to have this file in repo
-            sed -i "${{ format('s/BUCKET_NAME/{0}/g', secrets.BUCKET_NAME) }}" .github/s3_read_policy.json
-            # Need to have this file in repo
-            aws s3api put-bucket-policy --bucket ${{ format('{0}', secrets.BUCKET_NAME) }} --policy file://.github/s3_read_policy.json
+            echo "${{ format( 's3://{0}-{1}', secrets.BUCKET_NAME, steps.extract_branch.outputs.branch.lowercase ) }}"
+            # aws s3 mb ${{ format( 's3://{0}-{1}', secrets.BUCKET_NAME, steps.extract_branch.outputs.branch.lowercase ) }}
+            # aws s3 website ${{ format('s3://{0}-{1}/', secrets.BUCKET_NAME, steps.extract_branch.outputs.branch.lowercase ) }} --index-document index.html --error-document error.html
+            # # Need to have "s3_read_policy.json" file in repo under .github folder.
+            # cd .github
+            # sed -i "${{ format('s/BUCKET_NAME/{0}-{1}/g', secrets.BUCKET_NAME, steps.extract_branch.outputs.branch.lowercase ) }}" s3_read_policy.json
+            # # Need to have this file in repo
+            # aws s3api put-bucket-policy --bucket ${{ format('{0}-{1}', secrets.BUCKET_NAME, steps.extract_branch.outputs.branch.lowercase ) }} --policy file://.github/s3_read_policy.json
+            # cd ..
           fi
