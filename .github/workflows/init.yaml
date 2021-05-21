@@ -19,7 +19,7 @@ jobs:
         shell: bash
         run: |
           echo $(whoami)
-          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/,,})"
         
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
