@@ -33,14 +33,14 @@ jobs:
           if [ ${{ github.event.pull_request.merged }} -eq 'true' ]; then
             echo "##[set-output name=old_bucket_name;]${{ format( 's3://{0}-{1}', secrets.BUCKET_NAME, steps.extract.outputs.base_bn ) }}"
           fi
-#       - name: Dump GitHub context
-#         env:
-#           GITHUB_CONTEXT: ${{ toJson(github) }}
-#         run: |
-#           echo "This step is not commented out."
-#           # echo "$GITHUB_CONTEXT"
-#           echo ${{ github.head_ref }}
-#           echo ${{ github.base_ref }}
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "This step is not commented out."
+          # echo "$GITHUB_CONTEXT"
+          echo ${{ github.head_ref }}
+          echo ${{ github.base_ref }}
         
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
