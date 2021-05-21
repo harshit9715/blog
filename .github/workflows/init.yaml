@@ -16,14 +16,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
+      
+      - name: Extract branch name
+        shell: bash
         run: |
-          echo "This step is not commented out."
-          # echo "$GITHUB_CONTEXT"
-          echo ${{ github.head_ref,, }}
-          echo ${{ github.base_ref,, }}
+          echo "$(echo ${GITHUB_REF})"
+          echo "$(echo ${GITHUB_REF#refs/heads/})"
+          echo "##[set-output name=bucket_name;]$(echo ${GITHUB_REF#refs/heads/})"
+#       - name: Dump GitHub context
+#         env:
+#           GITHUB_CONTEXT: ${{ toJson(github) }}
+#         run: |
+#           echo "This step is not commented out."
+#           # echo "$GITHUB_CONTEXT"
+#           echo ${{ github.head_ref }}
+#           echo ${{ github.base_ref }}
         
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -36,7 +43,7 @@ jobs:
         run:  aws sts get-caller-identity
       - name: Enable static website
         run: |
-          BUCKET_EXISTS=$(aws s3api head-bucket --bucket ${{ format( '{0}-{1}' , secrets.BUCKET_NAME, github.head_ref,, ) }} 2>&1 || true)
+          BUCKET_EXISTS=$(aws s3api head-bucket --bucket ${{ format( '{0}-{1}' , secrets.BUCKET_NAME, github.head_ref ) }} 2>&1 || true)
           if [ -z "$BUCKET_EXISTS" ]; then
             echo "Bucket exists"
             if [ ${{ github.event.pull_request.merged }} -eq 'true' ]; then
