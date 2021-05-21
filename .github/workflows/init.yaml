@@ -20,8 +20,8 @@ jobs:
       - name: Extract branch name
         shell: bash
         run: |
-          echo "$(echo ${GITHUB_REF})"
-          echo "$(echo ${GITHUB_REF#refs/heads/})"
+          echo "$(echo ${GITHUB_HEAD_REF})"
+          echo "$(echo ${GITHUB_BASE_REF})"
           echo "##[set-output name=bucket_name;]$(echo ${GITHUB_REF#refs/heads/})"
 #       - name: Dump GitHub context
 #         env:
