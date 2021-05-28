@@ -1,4 +1,16 @@
-[   
+[   {
+        "title": "Cloud Automation",
+        "subTitle": "AWS cli, AWS SAM, AWS Amplify, AWS CDK",
+        "date": "Since January 2021",
+        "description": ["I have been exploring AWS CDK and cloud automation tools for speeding up the development process, AWS CDK is awesome!"],
+        "refs": [{
+            "name": "My API Resume (GitHub)",
+            "url": "https://github.com/harshit9715/cdk-API-resume"
+        },{
+            "name": "My API Resume",
+            "url": "https://iharshit.site/posts/api-resume/"
+        }]
+    },
     {
         "title": "Cloud and Serverless",
         "subTitle": "AWS, Azure, GCP, Oracle cloud",
