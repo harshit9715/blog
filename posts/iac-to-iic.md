@@ -20,7 +20,7 @@ After some discussion I decided to start fresh on a new infrastructure code, wit
 - Developers during the development process should be able to provision their own infrastructure. (because its serverless model)
 - Javascript as the programming language.
 
-Soon I lamded on [**AWS-CDK**](https://docs.aws.amazon.com/cdk/latest/guide/home.html). And my initial impressions were "This is exacly what I was looking for!"
+Soon I landed on [**AWS-CDK**](https://docs.aws.amazon.com/cdk/latest/guide/home.html). And my initial impressions were "This is exacly what I was looking for!"
 
 - No more templating language (JSON/ YAML), pure native code. (JAVASCRIPT)
 - Unit testable infrastructure :star:
@@ -41,7 +41,7 @@ Soon I lamded on [**AWS-CDK**](https://docs.aws.amazon.com/cdk/latest/guide/home
 - AWS CDK is a wrapper around cloudformation in Javascript.
 - JSII is a Javascript framework that allows code in any language to naturally interact with JavaScript classes.
 
-We write Write Python, Java, C# infrastructure code that gets converted into Javascript using jsii that CDK understands which again gets converted into Convert it into JSON that AWS Cloudformation understands.
+We write Python, Java, C# infrastructure code that gets converted into Javascript using jsii that CDK understands which again gets converted into JSON that AWS Cloudformation understands.
 
 ### This brings some problems with it!
 
@@ -50,7 +50,7 @@ We write Write Python, Java, C# infrastructure code that gets converted into Jav
 
 ### Why typescript / javascript is better?
 
-All components are written with typescript at first, so you are sure that they will work for you. With other languages, it works perfectly if you are using default CDK constructs but as soon as you are using 3rd party constructs it less certain that it will work.
+All components are written with typescript at first, so you are sure that they will work for you. With other languages, it works perfectly if you are using default CDK constructs but as soon as you are using 3rd party constructs it is less certain that it will work.
 
 I would recommend using Javascript for infrasturcture code even if some of the functionalities (lambdas) are in Python or Java.
 
@@ -61,14 +61,14 @@ Yeah, the local development process problem is still a concern and there are som
 2. [LocalStack](https://localstack.cloud/)
 3. SAM Local Invoke
 
-They helped upto an extent but still did not felt right.
+They helped up to an extent but still did not feel right.
 
 ### Welcome [Serverless Stack Toolkit(SST)](https://docs.serverless-stack.com/)
-[SST](https://docs.serverless-stack.com/) is a tool built around AWS CDK and beautifully resolves local development problem by proxying lambda request using websocket connection. Everything else is runs on AWS.
+[SST](https://docs.serverless-stack.com/) is a tool built around AWS CDK and beautifully resolves local development problem by proxying lambda request using websocket connection. Everything else runs on AWS.
 
 ## Hey, I thought this article was about Infra-is-code!
 
-YES it is. This article explains the journey from manual process to a place where Infrastruce is no more a template its core porgramming language code thats runs, deployes amd is tested like an application would. __Its no more Infrastructure-As-Code its Infrastructure-Is-Code!__
+YES it is. This article explains the journey from manual process to a place where Infrastruce is no more a template its core programming language code thats runs, deployes and is tested like an application would. __Its no more Infrastructure-As-Code its Infrastructure-Is-Code!__
 
 
 #### References
