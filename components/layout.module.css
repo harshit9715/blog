@@ -4,7 +4,13 @@
   margin: 1.5rem auto;
   padding: 2rem;
   border-radius: 15px;
-  background-color: white;
+  /* background-color: rgb(206, 195, 195); */
+  background-color: rgba(255, 255, 255, 0.692);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  z-index: 100;
 }
 
 .header {
