@@ -1,6 +1,6 @@
 # NextJS portfolio Hosting
 
-I hosted my [portfolio](https://iharshit.site) serverlessly on AWS using AWS CDK.
+I hosted my [portfolio](https://harshit.dev) serverlessly on AWS using AWS CDK.
 
 NextJS advance features like Image Optimization cannot be used when using next export.
 
