@@ -1,62 +1,84 @@
 import Head from 'next/head'
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-// import { Scrollbars } from 'rc-scrollbars';
+import { useState } from 'react';
 
 import Layout, { siteTitle, name } from '../../components/layout'
 import utilStyles from '../../styles/utils.module.css'
 import workData from '../../public/assets/workData.json';
-import { useState } from 'react';
+
 export default function WorkLife() {
     const [showDetail, setShowDetail] = useState(false);
-    const colors = (op = 1) => [`linear-gradient(to right bottom, rgba(41, 152, 255, ${op}), rgba(86, 67, 250, ${op}))`, `linear-gradient(to right bottom, rgba(126, 213, 111, ${op}), rgba(40, 180, 133, ${op}))`, `linear-gradient(to right bottom, rgba(255, 185, 0, ${op}), rgba(255, 119, 48, ${op}))`]
+    
     return (
         <Layout>
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <section className={utilStyles.headingMd}>
-                <p>Hello, I'm <b>{name}</b>. I'm a software engineer and full stack web developer from Hyderabad, India. You can contact me on{' '}
-                    <a href='https://www.linkedin.com/in/harshit9715/'><span>LinkedIn</span></a></p>
+            
+            {/* Hero */}
+            <section className={utilStyles.hero}>
+                <h1 className={utilStyles.heroTitle}>
+                    <span className="gradient-text">Project Portfolio</span>
+                </h1>
+                <p className={utilStyles.heroDescription}>
+                    Freelance engagements and client projects. From Fortune-500 omnichannel infrastructure to startup cloud modernization — selected work spanning 7+ years of serverless architecture.
+                </p>
+                <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                    <a href="https://www.linkedin.com/in/harshit9715/" target="_blank" rel="noopener noreferrer" className={utilStyles.buttonPrimary + ' ' + utilStyles.button}>
+                        LinkedIn
+                    </a>
+                    <a href="https://www.credly.com/users/harshit9715" target="_blank" rel="noopener noreferrer" className={utilStyles.button}>
+                        View Certifications
+                    </a>
+                    <a href="https://github.com/harshit9715" target="_blank" rel="noopener noreferrer" className={utilStyles.button}>
+                        GitHub
+                    </a>
+                </div>
             </section>
-            {/* <Scrollbars style={{ height: 600 }}> */}
-            <label htmlFor="detail" >Detailed? </label>
-            <label className={utilStyles.life__detail_switch}>
-                <input id="detail" type="checkbox" onClick={() => { setShowDetail(!showDetail) }} />
-                <span className={utilStyles.life__slider_round}></span>
-            </label>
-            <VerticalTimeline>
-                {workData.map((item, index) => (
-                    <VerticalTimelineElement
-                        key={index}
-                        // className="vertical-timeline-element--work"
-                        dateClassName={utilStyles.timeline_date_fix}
-                        contentStyle={{ background: colors()[index % 3], marginLeft: '0', color: '#000' }}
-                        contentArrowStyle={{ borderRight: `7px solid  ${colors()[index % 3]}` }}
-                        date={item.date}
-                        iconStyle={{ background: colors()[index % 3], color: '#fff' }}
-                        icon={<div />}
-                    >
-                        <h3 className="vertical-timeline-element-title">{item.title}</h3>
-                        <h4 className="vertical-timeline-element-subtitle">{item.subTitle}</h4>
-                        { showDetail && (<p>{item.description}</p>)}
-                        {
-                            // item.refs.map((ref, ix) => (<a key={ix} href={ref.url}>{ref.name}</a>))
-                            item.refs.map((ref, ix) => (
-                                <button
-                                    key={ix}
-                                    onClick={() => { window.open(ref.url, ref.url.startsWith('/') ? "_self" : "_blank") }}
-                                    className={utilStyles.pushable}>
-                                    <span className={utilStyles.shadow}></span>
-                                    <span className={utilStyles.edge} style={{ background: colors(0.1)[index % 3] }}></span>
-                                    <span className={utilStyles.front} style={{ background: colors(0.7)[index % 3] }}>{ref.name}</span>
-                                </button>
-                            ))
-                        }
-                    </VerticalTimelineElement>
-                ))}
-            </VerticalTimeline>
-            {/* </Scrollbars> */}
+            
+            {/* Toggle */}
+            <section className={utilStyles.section}>
+                <label className={utilStyles.switchLabel}>
+                    <span>Show detailed descriptions</span>
+                    <label className={utilStyles.life__detail_switch}>
+                        <input id="detail" type="checkbox" onChange={() => { setShowDetail(!showDetail) }} />
+                        <span className={utilStyles.life__slider_round}></span>
+                    </label>
+                </label>
+                
+                {/* Projects */}
+                <div className={utilStyles.projectList}>
+                    {workData.map((item, index) => (
+                        <div key={index} className={utilStyles.projectCard}>
+                            <div className={utilStyles.projectNumber}>
+                                {String(index + 1).padStart(2, '0')} / Featured
+                            </div>
+                            <h3 className={utilStyles.projectTitle}>{item.title}</h3>
+                            <p className={utilStyles.projectSubtitle}>{item.subTitle}</p>
+                            <div className={utilStyles.projectDate}>{item.date}</div>
+                            
+                            {showDetail && (
+                                <p className={utilStyles.projectDescription}>{item.description}</p>
+                            )}
+                            
+                            {item.refs && item.refs.length > 0 && (
+                                <div style={{ marginTop: '1.5rem', display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                                    {item.refs.map((ref, ix) => (
+                                        <a
+                                            key={ix}
+                                            href={ref.url}
+                                            target={ref.url.startsWith('/') ? "_self" : "_blank"}
+                                            rel={ref.url.startsWith('/') ? "" : "noopener noreferrer"}
+                                            className={utilStyles.button}
+                                        >
+                                            {ref.name}
+                                        </a>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </section>
         </Layout>
     )
 }
