@@ -24,15 +24,16 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.section}>
         <div className={utilStyles.headingMd}>
-          <p>Hello, I'm <b>{name}</b>. I'm a software engineer and full stack web developer from Hyderabad, India.</p>
-          <p style={{ marginTop: '1rem' }}>You can contact me on <a href='https://www.linkedin.com/in/harshit9715/'><span>LinkedIn</span></a></p>
+          <p>Hello, I'm <b>{name}</b>, a Freelance Cloud Solutions Architect and Fractional CTO based in Hyderabad, India.</p>
+          <p style={{ marginTop: '1rem' }}>With 7+ years of experience, I design and build serverless, event-driven, high-availability architectures for enterprise and Fortune-500-scale clients across retail/F&B, EdTech, InsurTech, and cybersecurity training.</p>
+          <p style={{ marginTop: '1rem' }}>Available for <a href='https://www.linkedin.com/in/harshit9715/'><span>Fixed-price, Hourly & Fractional Engagements</span></a></p>
         </div>
       </section>
       
       <section className={utilStyles.section}>
-        <h2 className={utilStyles.headingLg}>Experience & Work-life</h2>
+        <h2 className={utilStyles.headingLg}>Experience & Client Work</h2>
         <p style={{ color: 'var(--color-text-light)', marginTop: '0.5rem' }}>
-          Explore my professional journey and work experience. <Link href={`/work-life`}><a>View my work timeline →</a></Link>
+          Explore my professional journey with enterprise clients including Burger King, GoBuddy, Akylade, Dion Training, and more. <Link href={`/work-life`}><a>View my project portfolio →</a></Link>
         </p>
       </section>
 

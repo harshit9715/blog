@@ -1,145 +1,133 @@
-[   
+[
     {
-        "title": "Cloud and Serverless",
-        "subTitle": "AWS, Azure, GCP, Oracle cloud",
-        "date": "Since January 2020",
-        "description": ["I have 2 years of working in cloud, majorly in serverless stack. Building APIs and managing database and infrastructure."],
-        "refs": [{
-            "name": "My Github",
-            "url": "https://github.com/harshit9715"
-        }]
+        "title": "Lead Cloud Solutions Architect — Burger King",
+        "subTitle": "Omnichannel Retail Infrastructure | 800+ stores, 30M+ requests/day",
+        "date": "2024 - Recent",
+        "description": "Architected high-throughput, edge-secured 3-tier omnichannel infrastructure for 800+ physical stores and 2,000+ self-ordering kiosks. Engineered platform capacity for 30M+ requests/day with AWS CloudFront path-based routing and edge-layer WAF. Eliminated Lambda cold-start latency using Provisioned Concurrency and Custom Aliasing. Built multi-environment CI/CD pipelines with GitHub Actions and AWS CodePipeline.",
+        "refs": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com/harshit9715"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/harshit9715"
+            }
+        ]
     },
     {
-        "title": "API Development",
-        "subTitle": "Serverless APIs, NodeJs, Python ,Postman, OpenAPI, Swagger",
-        "date": "Since January 2020",
-        "description": ["I have experience building APIs in NodeJs and Python. I have written some amazing documentations using OpenAPI specification, I learnt this as a challenge while upgrading a swagger 2 doc to OAS3."],
-        "refs": [{
-            "name": "My API Resume",
-            "url": "/posts/api-resume"
-        }]
+        "title": "Acting CTO & Lead Engineer — GoBuddy",
+        "subTitle": "Cloud Modernization | 80% Cost Reduction | Team of 5 Engineers",
+        "date": "2023 - 2024",
+        "description": "Led 5-engineer team through legacy-to-cloud modernization, migrating unmanaged single-server to elastic Amazon ECS Fargate infrastructure. Delivered 80% hosting cost reduction via AWS Spot Instances, automated scheduling, and EFS-to-S3 migration. Retired vulnerable .env configuration for AWS Secrets Manager. Engineered serverless data lake with MongoDB Streams → S3 → Athena. Built GenAI customer support with Chatwoot + Amazon Bedrock + Anthropic Claude Haiku.",
+        "refs": [
+            {
+                "name": "Case Study",
+                "url": "https://www.linkedin.com/in/harshit9715"
+            }
+        ]
     },
     {
-        "title": "Contact Tracing App",
-        "subTitle": "Covid-19, Aarogya Setu, etc",
-        "date": "October 2020",
-        "description": ["Built infrastructure for a covid-19 contact app, (like Aarogue Setu) obstacle was, massive amount of egress traffic! Failed twice due to cost feasibility issues, 3rd time, it worked out fine."],
+        "title": "Principal Systems Engineer — Akylade",
+        "subTitle": "Cyber Range / Certification Exam Infrastructure",
+        "date": "2023",
+        "description": "Designed fully automated, on-demand cyber-lab infrastructure with isolated multi-tenant VPC sandboxes per candidate. Orchestrated exam-triggered workflows using MongoDB schedules, AWS EventBridge Scheduler, and Step Functions launched 1 hour before each exam. Delivered browser-based lab access via Apache Guacamole on ECS with session metadata tagging and screen-recording for compliance. Optimized EC2 fleet to build multi-device VPC networks in under 15 minutes.",
+        "refs": [
+            {
+                "name": "About Akylade",
+                "url": "https://www.linkedin.com/company/akylade/"
+            }
+        ]
+    },
+    {
+        "title": "Lead Full-Stack Architect — Dion Training",
+        "subTitle": "Corporate Client Management & Examination Platform",
+        "date": "2022 - 2023",
+        "description": "Re-architected client management, online examination, and Order Management System onto scalable AWS infrastructure. Designed DynamoDB single-table architecture unifying orders, results, students, vouchers via AWS AppSync (GraphQL) and Amplify. Built distributed web-scraping engines (Playwright, Selenium, BeautifulSoup) for CompTIA and Peoplecert exam-result automation. Migrated long-running scrape jobs from Lambda to ECS orchestrated via Step Functions. Delivered full internal suite with automated retake-voucher workflows and webhook integrations.",
+        "refs": [
+            {
+                "name": "Dion Training",
+                "url": "https://www.diontraining.com/"
+            }
+        ]
+    },
+    {
+        "title": "Lead Cloud Solutions Architect",
+        "subTitle": "Insurance Claim Settlement Integration | 100% Serverless",
+        "date": "2022",
+        "description": "Engineered 100% serverless, PGP-encrypted claims-processing pipeline on AWS Lambda and Step Functions Express Workflows for high-throughput financial data transformations with end-to-end cryptographic guarantees. Sourced active cryptographic keys securely via AWS Secrets Manager, eliminating static key exposure across transaction pipeline.",
         "refs": []
     },
     {
-        "title": "3rd Party Integrations",
-        "subTitle": "Stripe, Hotelbeds, Kiwi, WeatherStack, Mapbox, etc",
-        "date": "March 2020",
-        "description": ["I also have integrated with backends such as firebase and AWS Amplify."],
+        "title": "Solutions Architect — Belgian Waffle Co.",
+        "subTitle": "Scalable Web + CMS Infrastructure | 500+ Retail Stores",
+        "date": "2021 - 2022",
+        "description": "Designed scalable web and CMS architecture backing operations for 500+ physical retail stores. Built serverless infrastructure for high-traffic content management and delivery.",
         "refs": []
     },
     {
-        "title": "Scripting",
-        "subTitle": "Python, Google App Scripting,Jupyter, Scripting, Competitive programming",
-        "date": "Since 2016",
-        "description": ["I have developed good hands-on with python over last 5 years, and using jupiter notebooks. (Sometimes I use Jupyter while developing scripts as well, it reduces development time.), I used Google App script to automate simple tasks when using google sheets, gmail, calendar,etc"],
-        "refs": [{
-            "name": "Python Scripting",
-            "url": "https://github.com/harshit9715/python-scripts"
-        },
-        {
-            "name": "Bash Scripting",
-            "url": "https://github.com/harshit9715/bash-scripts"
-        }
-    ]
-    },
-    {
-        "title": "CICD and Automation",
-        "subTitle": "Cloudbees Certified Jenkins Engineer, Github/Gitlab Actions, Bitbucket Pipelines, etc",
-        "date": "Since 2021",
-        "description": ["I have been playing with Github actions for a couple of months, building CICD for projects. I am Jenkins Certified. I enjoy this a lot."],
+        "title": "AWS Connect GenAI Voice Agent",
+        "subTitle": "Real-Time Bidirectional AI Speech Agent",
+        "date": "2023",
+        "description": "Built fully serverless, real-time bidirectional AI speech agent on AWS Connect and Amazon Bedrock. Implemented intelligent voice interactions with natural language understanding for customer service automation.",
         "refs": []
     },
     {
-        "title": "FullStack Development",
-        "subTitle": "MERN Stack, serverless, vercel, static hosting, SSR",
-        "date": "Since April 2020",
-        "description": ["It's never easy to picture what an end result will look like especially when you are preparing a backend, sometimes you also need to know some basic frontend as well"],
+        "title": "Serverless CQRS Engine",
+        "subTitle": "Command Query Responsibility Segregation | AWS Lambda & DynamoDB",
+        "date": "2022",
+        "description": "Implemented Command Query Responsibility Segregation pattern to decouple write/read models using AWS Lambda and DynamoDB. Achieved optimized performance for high-scale read and write operations.",
+        "refs": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com/harshit9715"
+            }
+        ]
+    },
+    {
+        "title": "Unified Analytics Engine",
+        "subTitle": "Metabase BI, Sentry, PostHog Product Analytics",
+        "date": "2021 - 2022",
+        "description": "Aggregated multi-app data into data warehouses and configured Metabase BI alongside Sentry error tracking and PostHog product analytics. Integrated Google Tag Manager, Google Analytics, and Google Ads for comprehensive marketing-stack tracking.",
         "refs": []
     },
     {
-        "title": "React and React Native",
-        "subTitle": "Still learning to write production level, manageable code.",
-        "date": "Since August 2020",
-        "description": ["Sometimes, you just need a guy who can quickly build and end-to-end POC, I have experience building POC in react and react native. heck, my react-native app is in production."],
+        "title": "Serverless Automation Suite",
+        "subTitle": "Lambda, EventBridge, API Gateway, Step Functions",
+        "date": "2020 - 2021",
+        "description": "Built suite of serverless automation tools including: S3-to-WorkDocs sync automation, Lambda–SageMaker inference API wrappers, EventBridge-driven Slack uptime alerting, serverless URL shortener (API Gateway/Lambda/DynamoDB). Integrated various third-party APIs including Stripe, Firebase, AWS Amplify.",
+        "refs": [
+            {
+                "name": "Python Scripts",
+                "url": "https://github.com/harshit9715/python-scripts"
+            },
+            {
+                "name": "Bash Scripts",
+                "url": "https://github.com/harshit9715/bash-scripts"
+            }
+        ]
+    },
+    {
+        "title": "CI/CD & DevOps Engineering",
+        "subTitle": "Cloudbees Certified Jenkins Engineer | GitHub Actions",
+        "date": "Since 2020",
+        "description": "Jenkins Certified Engineer with extensive experience in GitHub Actions, GitLab CI, and Bitbucket Pipelines. Built Infrastructure as Code (IaC) pipelines with GitOps practices. Implemented multi-environment provisioning (Dev/Staging/Prod) with automated containerization using Docker and Amazon ECR.",
         "refs": []
     },
     {
-        "title": "Chatbot using Google DialogueFlow",
-        "subTitle": "I created a chatbot for playing Secret Santa🎅",
-        "date": "November 2020",
-        "description": ["I have worked with Socket.io to build a real-time chat application. I have built a chatbot using google dialogue flow. It's called 'SecretSanta Bot' and it's available on telegram"],
-        "refs": [{
-            "name": "SecretSantaBot🎅",
-            "url": "https://t.me/SecretSantaHelperBot"
-        }
-    ]
-    },
-    {
-        "title": "NLP with Spacy",
-        "subTitle": "Distractor generator challenge",
-        "date": "October 2019",
-        "description": ["Worked with spaCy (open-source NLP) and built a model with 26% accuracy for an open challenge. (I know it's low, best achieved was 34%... bring this up and we will talk about the problem statement and possible solutions that we could have done.)"],
-        "refs": [{
-            "name": "Distractor?",
-            "url": "https://www.aclweb.org/anthology/W18-0548/"
-        }
-    ]
-    },
-    {
-        "title": "Edge Computing ML",
-        "subTitle": "Edge-ML and GA",
-        "date": "September 2019",
-        "description": ["Worked on genetic algorithms (Darwinism) and Edge-ML using raspberry and intel-neural-compute-stick and built 5 class image classification model."],
-        "refs": [{
-            "name": "Edge-ML",
-            "url": "https://towardsdatascience.com/why-machine-learning-on-the-edge-92fac32105e6"
-        }
-    ]
-    },
-    {
-        "title": "Processing",
-        "subTitle": "",
-        "date": "August 2019",
-        "description": ["worked with processing and understood 'how-to programming'.🖥️"],
-        "refs": [{
-            "name": "processing",
-            "url": "https://processing.org/"
-        }
-    ]
-    },
-    {
-        "title": "MRBS PhP App",
-        "subTitle": "Deployed Meeting Room Booking System",
-        "date": "July 2019",
-        "description": [
-            "Deployed a PHP app MRBS in office for managing meeting sessions, not really used since we had a solution from google suite"
-        ],
-        "refs": [{
-            "name": "MRBS",
-            "url": "https://mrbs.sourceforge.io/demo.php"
-        },{
-            "name": "G-Suite MRBS",
-            "url": "https://support.google.com/a/answer/1686462?hl=en"
-        }
-    ]
-    },
-    {
-        "title": "Thats All",
-        "subTitle": "There is so much I haven't added here, check that out in the detailed blog",
-        "date": "End",
-        "description": [
-            "Have a nice day, stay-safe."
-        ],
-        "refs": [{
-            "name": "Detailed Work-Life",
-            "url": "/posts/work-life"
-        }
-    ]
+        "title": "Education & Certifications",
+        "subTitle": "B.Tech Computer Science | AWS Certified Solutions Architect",
+        "date": "2015 - 2019",
+        "description": "Bachelor of Technology (B.Tech), Computer Science & Engineering from Dr. A.P.J. Abdul Kalam Technical University (AKTU). AWS Certified Solutions Architect – Associate. Additional certifications available on Credly.",
+        "refs": [
+            {
+                "name": "View Certifications",
+                "url": "https://www.credly.com/users/harshit9715"
+            },
+            {
+                "name": "AWS Certification",
+                "url": "https://www.credly.com/users/harshit9715"
+            }
+        ]
     }
 ]

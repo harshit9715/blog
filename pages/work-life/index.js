@@ -17,8 +17,9 @@ export default function WorkLife() {
             </Head>
             <section className={utilStyles.section}>
                 <div className={utilStyles.headingMd}>
-                    <p>Hello, I'm <b>{name}</b>. I'm a software engineer and full stack web developer from Hyderabad, India.</p>
-                    <p style={{ marginTop: '1rem' }}>You can contact me on <a href='https://www.linkedin.com/in/harshit9715/'><span>LinkedIn</span></a></p>
+                    <p>Hello, I'm <b>{name}</b>, a Freelance Cloud Solutions Architect and Fractional CTO based in Hyderabad, India.</p>
+                    <p style={{ marginTop: '1rem' }}>With 7+ years of experience designing serverless, event-driven architectures for enterprise clients. Below is my freelance project portfolio featuring engagements with Fortune-500 brands and startups.</p>
+                    <p style={{ marginTop: '1rem' }}>Contact me on <a href='https://www.linkedin.com/in/harshit9715/'><span>LinkedIn</span></a> or view my <a href='https://www.credly.com/users/harshit9715' target='_blank' rel='noopener noreferrer'><span>Certifications</span></a></p>
                 </div>
             </section>
             
