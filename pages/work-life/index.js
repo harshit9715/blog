@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Layout, { siteTitle, name } from '../../components/layout'
 import utilStyles from '../../styles/utils.module.css'
 import workData from '../../public/assets/workData.json';
-import { useState } from 'react';
+
 export default function WorkLife() {
     const [showDetail, setShowDetail] = useState(false);
     
