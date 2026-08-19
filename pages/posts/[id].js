@@ -29,12 +29,12 @@ export default function Post({ postData }) {
             <Head>
                 <title>{postData.title}</title>
             </Head>
-            <article>
+            <article className={utilStyles.section}>
                 <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-                <div className={utilStyles.lightText}>
+                <div className={utilStyles.lightText} style={{ marginBottom: '2rem', paddingBottom: '1rem', borderBottom: '1px solid var(--color-border)' }}>
                     <Date dateString={postData.date} />
                 </div>
-                <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+                <div className="post-content" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             </article>
         </Layout>
     )

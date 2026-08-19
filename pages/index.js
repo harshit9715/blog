@@ -22,21 +22,28 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>Hello, I'm <b>{name}</b>. I'm a software engineer and full stack web developer from Hyderabad, India. You can contact me on{' '}
-          <a href='https://www.linkedin.com/in/harshit9715/'><span>LinkedIn</span></a></p>
+      <section className={utilStyles.section}>
+        <div className={utilStyles.headingMd}>
+          <p>Hello, I'm <b>{name}</b>. I'm a software engineer and full stack web developer from Hyderabad, India.</p>
+          <p style={{ marginTop: '1rem' }}>You can contact me on <a href='https://www.linkedin.com/in/harshit9715/'><span>LinkedIn</span></a></p>
+        </div>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Expereince and Work-life...</h2>
-          <p>My work-life <Link href={`/work-life`}><a>summary</a></Link>.</p>
-        <h2 className={utilStyles.headingLg}>Blogs</h2>
+      
+      <section className={utilStyles.section}>
+        <h2 className={utilStyles.headingLg}>Experience & Work-life</h2>
+        <p style={{ color: 'var(--color-text-light)', marginTop: '0.5rem' }}>
+          Explore my professional journey and work experience. <Link href={`/work-life`}><a>View my work timeline →</a></Link>
+        </p>
+      </section>
+
+      <section className={utilStyles.section}>
+        <h2 className={utilStyles.headingLg}>Latest Blog Posts</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
-              <br />
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
               </small>
