@@ -28,7 +28,7 @@ export default function Home({ allPostsData }) {
       <section className={utilStyles.hero}>
         <h2 className={utilStyles.heroSubtitle}>
           Building reliable{' '}
-          <span style={{ marginRight: '0.3em' }}>
+          <span style={{ display: 'inline-block', marginRight: '0.5em' }}>
             <ContainerTextFlip 
               words={[
                 "serverless systems",
@@ -39,7 +39,7 @@ export default function Home({ allPostsData }) {
               animationDuration={500}
               textClassName="gradient-text"
             />
-          </span>{' '}
+          </span>
           at scale.
         </h2>
         <p className={utilStyles.heroDescription}>
