@@ -27,25 +27,48 @@ export default function ContainerTextFlip({
         verticalAlign: 'baseline',
       }}
     >
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={currentIndex}
-          className={textClassName}
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -15 }}
-          transition={{
-            duration: animationDuration / 1000,
-            ease: [0.4, 0, 0.2, 1],
-          }}
-          style={{
-            display: 'inline-block',
-            whiteSpace: 'nowrap',
-          }}
-        >
-          {words[currentIndex]}
-        </motion.span>
-      </AnimatePresence>
+      {/* Hidden spacer to maintain layout width */}
+      <span
+        style={{
+          visibility: 'hidden',
+          whiteSpace: 'nowrap',
+          display: 'inline-block',
+        }}
+        aria-hidden="true"
+      >
+        {words[currentIndex]}
+      </span>
+      
+      {/* Animated text positioned absolutely */}
+      <span
+        style={{
+          position: 'absolute',
+          left: 0,
+          top: 0,
+          right: 0,
+          display: 'inline-block',
+        }}
+      >
+        <AnimatePresence mode="wait">
+          <motion.span
+            key={currentIndex}
+            className={textClassName}
+            initial={{ opacity: 0, y: '0.4em' }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: '-0.4em' }}
+            transition={{
+              duration: animationDuration / 1000,
+              ease: [0.4, 0, 0.2, 1],
+            }}
+            style={{
+              display: 'inline-block',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {words[currentIndex]}
+          </motion.span>
+        </AnimatePresence>
+      </span>
     </span>
   );
 }
