@@ -27,20 +27,17 @@ export default function Home({ allPostsData }) {
       {/* Hero Section */}
       <section className={utilStyles.hero}>
         <h2 className={utilStyles.heroSubtitle}>
-          Building reliable{' '}
-          <span style={{ display: 'inline-block', marginRight: '0.5em' }}>
-            <ContainerTextFlip 
-              words={[
-                "serverless systems",
-                "cloud solutions",
-                "aws infrastructure"
-              ]}
-              interval={3000}
-              animationDuration={500}
-              textClassName="gradient-text"
-            />
-          </span>
-          at scale.
+          Building production-grade{' '}
+          <ContainerTextFlip 
+            words={[
+              "serverless systems",
+              "cloud solutions",
+              "aws infrastructure"
+            ]}
+            interval={3000}
+            animationDuration={500}
+            textClassName="gradient-text"
+          />
         </h2>
         <p className={utilStyles.heroDescription}>
           Freelance Cloud Solutions Architect and Fractional CTO with 7+ years of experience designing and building serverless, event-driven, high-availability architectures for enterprise and Fortune-500-scale clients across retail/F&B, EdTech, InsurTech, and cybersecurity training.
