@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import { ContainerTextFlip } from './ui/container-text-flip'
 
 export const name = 'Harshit Gupta'
 export const siteTitle = 'Harshit Gupta - Cloud Solutions Architect'
@@ -26,7 +27,20 @@ export default function Layout({ children, home }) {
           <h1 className={utilStyles.heroTitle}>
             <span className="gradient-text">{name}</span>
           </h1>
-          <p className={styles.subtitle}>Site Reliability Engineer · Cloud Solutions Architect</p>
+          <p className={styles.subtitle}>
+            <ContainerTextFlip 
+              words={[
+                "Site Reliability Engineer",
+                "Cloud Solutions Architect",
+                "AWS Magician",
+                "FullStack Cloud Engineer",
+                "Lead DevOps",
+                "Cloud Security Specialist"
+              ]}
+              interval={3000}
+              animationDuration={500}
+            />
+          </p>
           <p className={styles.location}>📍 Hyderabad, India</p>
         </header>
       ) : (
