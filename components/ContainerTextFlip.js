@@ -41,8 +41,8 @@ export default function ContainerTextFlip({
       });
       
       document.body.removeChild(tempSpan);
-      // Add 48px padding to prevent overlap with adjacent text
-      setWidth(`${maxWidth + 48}px`);
+      // Add 64px padding to prevent overlap with adjacent text
+      setWidth(`${maxWidth + 64}px`);
     }
   }, [words, textClassName]);
 
