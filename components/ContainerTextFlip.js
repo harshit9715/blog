@@ -6,7 +6,7 @@ export default function ContainerTextFlip({
   interval = 3000,
   className = "",
   textClassName = "",
-  animationDuration = 700,
+  animationDuration = 500,
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -19,33 +19,33 @@ export default function ContainerTextFlip({
   }, [words.length, interval]);
 
   return (
-    <div
+    <span
       className={className}
       style={{
         display: 'inline-block',
         position: 'relative',
-        overflow: 'hidden',
-        whiteSpace: 'nowrap',
+        verticalAlign: 'baseline',
       }}
     >
       <AnimatePresence mode="wait">
         <motion.span
           key={currentIndex}
           className={textClassName}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
+          exit={{ opacity: 0, y: -15 }}
           transition={{
             duration: animationDuration / 1000,
             ease: [0.4, 0, 0.2, 1],
           }}
           style={{
             display: 'inline-block',
+            whiteSpace: 'nowrap',
           }}
         >
           {words[currentIndex]}
         </motion.span>
       </AnimatePresence>
-    </div>
+    </span>
   );
 }

@@ -38,7 +38,7 @@ export default function Layout({ children, home }) {
                 "Cloud Security Specialist"
               ]}
               interval={3000}
-              animationDuration={700}
+              animationDuration={500}
             />
           </p>
           <p className={styles.location}>📍 Hyderabad, India</p>

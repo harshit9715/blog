@@ -28,17 +28,16 @@ export default function Home({ allPostsData }) {
       <section className={utilStyles.hero}>
         <h2 className={utilStyles.heroSubtitle}>
           Building reliable{' '}
-          <span className="gradient-text">
-            <ContainerTextFlip 
-              words={[
-                "serverless systems",
-                "cloud solutions",
-                "aws infrastructure"
-              ]}
-              interval={3000}
-              animationDuration={700}
-            />
-          </span>{' '}
+          <ContainerTextFlip 
+            words={[
+              "serverless systems",
+              "cloud solutions",
+              "aws infrastructure"
+            ]}
+            interval={3000}
+            animationDuration={500}
+            textClassName="gradient-text"
+          />{' '}
           at scale.
         </h2>
         <p className={utilStyles.heroDescription}>
