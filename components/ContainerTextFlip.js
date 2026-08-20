@@ -22,7 +22,7 @@ export default function ContainerTextFlip({
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      // Measure all words and use the maximum width
+      // Measure all words and use the maximum width + padding
       const tempSpan = document.createElement('span');
       tempSpan.style.visibility = 'hidden';
       tempSpan.style.position = 'absolute';
@@ -41,7 +41,8 @@ export default function ContainerTextFlip({
       });
       
       document.body.removeChild(tempSpan);
-      setWidth(`${maxWidth}px`);
+      // Add 16px padding to prevent overlap with adjacent text
+      setWidth(`${maxWidth + 16}px`);
     }
   }, [words, textClassName]);
 
