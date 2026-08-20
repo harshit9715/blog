@@ -5,7 +5,7 @@ import { getSortedPostsData } from '../lib/posts'
 import Date from '../components/date'
 import Layout, { siteTitle, name } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
-import ContainerTextFlip from '../components/ContainerTextFlip'
+import { ContainerTextFlip } from '../components/ui/container-text-flip'
 
 
 export async function getStaticProps() {
