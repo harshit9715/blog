@@ -5,6 +5,7 @@ import { getSortedPostsData } from '../lib/posts'
 import Date from '../components/date'
 import Layout, { siteTitle, name } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
+import ContainerTextFlip from '../components/ContainerTextFlip'
 
 
 export async function getStaticProps() {
@@ -26,7 +27,19 @@ export default function Home({ allPostsData }) {
       {/* Hero Section */}
       <section className={utilStyles.hero}>
         <h2 className={utilStyles.heroSubtitle}>
-          Building reliable <span className="gradient-text">serverless systems</span> at scale
+          Building reliable{' '}
+          <span className="gradient-text">
+            <ContainerTextFlip 
+              words={[
+                "serverless systems",
+                "cloud solutions",
+                "aws infrastructure"
+              ]}
+              interval={3000}
+              animationDuration={700}
+            />
+          </span>{' '}
+          at scale.
         </h2>
         <p className={utilStyles.heroDescription}>
           Freelance Cloud Solutions Architect and Fractional CTO with 7+ years of experience designing and building serverless, event-driven, high-availability architectures for enterprise and Fortune-500-scale clients across retail/F&B, EdTech, InsurTech, and cybersecurity training.
